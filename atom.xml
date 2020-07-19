@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kricchan.github.io/"/>
-  <updated>2020-07-12T13:20:56.488Z</updated>
+  <updated>2020-07-19T08:33:10.894Z</updated>
   <id>https://kricchan.github.io/</id>
   
   <author>
@@ -15,6 +15,91 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>c语言（space）</title>
+    <link href="https://kricchan.github.io/2020/07/17/c-space/"/>
+    <id>https://kricchan.github.io/2020/07/17/c-space/</id>
+    <published>2020-07-17T08:23:12.000Z</published>
+    <updated>2020-07-19T08:33:10.894Z</updated>
+    
+    <content type="html"><![CDATA[<p>常用基本数据类型占用空间（64位机器为例）</p><table><thead><tr><th>类型</th><th>长度</th></tr></thead><tbody><tr><td>char</td><td>1</td></tr><tr><td>short</td><td>2</td></tr><tr><td>int</td><td>4</td></tr><tr><td>long</td><td>8</td></tr><tr><td>float</td><td>4</td></tr><tr><td>double</td><td>8</td></tr><tr><td>long int</td><td>8</td></tr><tr><td>long long</td><td>8</td></tr><tr><td>long double</td><td>16</td></tr></tbody></table><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">char</span> c;</span><br><span class="line">  short s;</span><br><span class="line">  <span class="keyword">int</span> i;</span><br><span class="line">  <span class="keyword">long</span> l;</span><br><span class="line">  <span class="keyword">float</span> f;</span><br><span class="line">  <span class="keyword">double</span> d;</span><br><span class="line">  <span class="keyword">long</span> <span class="keyword">int</span> li;</span><br><span class="line">  <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">  <span class="keyword">long</span> <span class="keyword">double</span> ld;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"char sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(c));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"short sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(s));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"int sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(i));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"long sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(l));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"float sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(f));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"double sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(d));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"long int sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(li));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"long long sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(ll));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"long double sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(ld));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;常用基本数据类型占用空间（64位机器为例）&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;长度&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;char&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td
+      
+    
+    </summary>
+    
+    
+    
+      <category term="c语言" scheme="https://kricchan.github.io/tags/c%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>c 语言 (scanf)</title>
+    <link href="https://kricchan.github.io/2020/07/15/c-scanf/"/>
+    <id>https://kricchan.github.io/2020/07/15/c-scanf/</id>
+    <published>2020-07-15T07:53:45.000Z</published>
+    <updated>2020-07-19T08:23:21.933Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="format"><a href="#format" class="headerlink" title="format"></a>format</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&#x3D;%[*][width][modifiers]type&#x3D;]</span><br></pre></td></tr></table></figure><h2 id="scanf"><a href="#scanf" class="headerlink" title="scanf"></a>scanf</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a,b,c;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"请输入三个数字："</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;a,&amp;b,&amp;c);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d,%d,%d \n"</span>,a,b,c);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="sscanf"><a href="#sscanf" class="headerlink" title="sscanf"></a>sscanf</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> a, b, c;</span><br><span class="line">   <span class="keyword">char</span> i[<span class="number">100</span>];</span><br><span class="line">   <span class="keyword">char</span> j[<span class="number">2</span>];</span><br><span class="line">   <span class="keyword">char</span> k[<span class="number">100</span>];</span><br><span class="line">   k[<span class="number">0</span>] = <span class="string">'\0'</span>;</span><br><span class="line"></span><br><span class="line">   <span class="built_in">sscanf</span>( <span class="string">"1 2 3 hello 12345678901234567890"</span>, <span class="string">"%d %d %d %s %s"</span>, &amp;a, &amp;b, &amp;c, i, j);</span><br><span class="line"></span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"%d %d %d '%s' '%s' '%s'\n"</span>, a, b, c, i, j, k);</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>使用时，需要注意 附加参数的类型！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;format&quot;&gt;&lt;a href=&quot;#format&quot; class=&quot;headerlink&quot; title=&quot;format&quot;&gt;&lt;/a&gt;format&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut
+      
+    
+    </summary>
+    
+    
+    
+      <category term="c语言" scheme="https://kricchan.github.io/tags/c%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>c 语言 (print)</title>
+    <link href="https://kricchan.github.io/2020/07/13/c-printf/"/>
+    <id>https://kricchan.github.io/2020/07/13/c-printf/</id>
+    <published>2020-07-13T13:54:09.000Z</published>
+    <updated>2020-07-19T07:51:49.440Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s\n"</span>, <span class="string">"hello word"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="format"><a href="#format" class="headerlink" title="format"></a>format</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%[flags][width][.precision][length]specifier</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> i = <span class="number">123</span>;</span><br><span class="line">   <span class="keyword">long</span> <span class="keyword">long</span> ll = <span class="number">10000000000</span>;</span><br><span class="line"></span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"整数: %d %ld %lld \n"</span>, <span class="number">2020</span>, <span class="number">202002020000</span>, ll);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"10进制: %d 16进制: %x %#x 8进制: %o %#o \n"</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"浮点数: %f(前7位有效，小数6位) %lf(前16位有效，小数6位) %05.2f %+.0e %E \n"</span>, <span class="number">3.1415925563</span>, <span class="number">1234567890.141592653</span>, <span class="number">3.1415</span>, <span class="number">31.415</span>, <span class="number">31.415</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"字符: %c %c \n"</span>, <span class="string">'a'</span>, <span class="number">65</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"字符串: %s \n"</span>, <span class="string">"Hello World"</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"右对齐，用空格补齐: '%10d' \n"</span>, <span class="number">2020</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"右对齐，用0补齐: '%010d' \n"</span>, <span class="number">2020</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"左对齐，用空格补齐: '%-10d' \n"</span>, <span class="number">2020</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"左对齐，用0补齐: '%-8.10f' \n"</span>, <span class="number">2020.0202</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"百分之百: %d%% \n"</span>， <span class="number">100</span>);                                   </span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"自动选择%%f 或者 %%e %g %g %G %G \n"</span>, <span class="number">10.1</span>, <span class="number">0.00000000002</span>, <span class="number">10.3</span>, <span class="number">0.0000000004</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"有符号的整数: %i \n"</span>, <span class="number">100</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"无符号八进制整数: %o \n"</span>, <span class="number">100</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"指针: %p \n"</span>, &amp;i);</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="sprintf-amp-amp-snprintf"><a href="#sprintf-amp-amp-snprintf" class="headerlink" title="sprintf &amp;&amp; snprintf"></a>sprintf &amp;&amp; snprintf</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> str[<span class="number">80</span>];</span><br><span class="line">    <span class="keyword">char</span> str2[<span class="number">5</span>];</span><br><span class="line">    <span class="keyword">int</span> len;</span><br><span class="line"></span><br><span class="line">    len = <span class="built_in">sprintf</span>(str, <span class="string">"%f"</span>, M_PI);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"足够缓冲区 %d %s \n"</span>, len, str);</span><br><span class="line"></span><br><span class="line">    len = <span class="built_in">sprintf</span>(str2, <span class="string">"%.2f"</span>, M_PI);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"刚好缓冲区 %d %s \n"</span>, len, str2);</span><br><span class="line"></span><br><span class="line">    len = <span class="built_in">snprintf</span>(str2, <span class="number">5</span>, <span class="string">"%f"</span>, M_PI);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"限制长度 %d %s \n"</span>, len, str2);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 缓冲区溢出</span></span><br><span class="line">    len = <span class="built_in">sprintf</span>(str2, <span class="string">"%f"</span>, M_PI);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d %s \n"</span>, len, str2);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;li
+      
+    
+    </summary>
+    
+    
+    
+      <category term="c语言" scheme="https://kricchan.github.io/tags/c%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

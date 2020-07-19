@@ -55,6 +55,24 @@
 			
 				<li><a href="/">主页</a></li>
 	        
+				<li><a href="/tags/c%E8%AF%AD%E8%A8%80/">c语言</a></li>
+	        
+				<li><a href="/tags/c++/">C++</a></li>
+	        
+				<li><a href="/tags/Go%E8%AF%AD%E8%A8%80/">Go语言</a></li>
+	        
+				<li><a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></li>
+	        
+				<li><a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></li>
+	        
+				<li><a href="/tags/%E7%BD%91%E7%BB%9C/">网络</a></li>
+	        
+				<li><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></li>
+	        
+				<li><a href="/tags/%E6%9E%B6%E6%9E%84/">架构</a></li>
+	        
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -103,6 +121,24 @@
 			
 				
 			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -116,10 +152,28 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 100%"><a href="/">主页</a></li>
+					<li style="width: 10%"><a href="/">主页</a></li>
+		        
+					<li style="width: 10%"><a href="/tags/c%E8%AF%AD%E8%A8%80/">c语言</a></li>
+		        
+					<li style="width: 10%"><a href="/tags/c++/">C++</a></li>
+		        
+					<li style="width: 10%"><a href="/tags/Go%E8%AF%AD%E8%A8%80/">Go语言</a></li>
+		        
+					<li style="width: 10%"><a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></li>
+		        
+					<li style="width: 10%"><a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></li>
+		        
+					<li style="width: 10%"><a href="/tags/%E7%BD%91%E7%BB%9C/">网络</a></li>
+		        
+					<li style="width: 10%"><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></li>
+		        
+					<li style="width: 10%"><a href="/tags/%E6%9E%B6%E6%9E%84/">架构</a></li>
+		        
+					<li style="width: 10%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -135,6 +189,282 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-c-space" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/17/c-space/">c语言（space）</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/17/c-space/" class="archive-article-date">
+  	<time datetime="2020-07-17T08:23:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>常用基本数据类型占用空间（64位机器为例）</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>长度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>char</td>
+<td>1</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2</td>
+</tr>
+<tr>
+<td>int</td>
+<td>4</td>
+</tr>
+<tr>
+<td>long</td>
+<td>8</td>
+</tr>
+<tr>
+<td>float</td>
+<td>4</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8</td>
+</tr>
+<tr>
+<td>long int</td>
+<td>8</td>
+</tr>
+<tr>
+<td>long long</td>
+<td>8</td>
+</tr>
+<tr>
+<td>long double</td>
+<td>16</td>
+</tr>
+</tbody></table>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">char</span> c;</span><br><span class="line">  short s;</span><br><span class="line">  <span class="keyword">int</span> i;</span><br><span class="line">  <span class="keyword">long</span> l;</span><br><span class="line">  <span class="keyword">float</span> f;</span><br><span class="line">  <span class="keyword">double</span> d;</span><br><span class="line">  <span class="keyword">long</span> <span class="keyword">int</span> li;</span><br><span class="line">  <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">  <span class="keyword">long</span> <span class="keyword">double</span> ld;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"char sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(c));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"short sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(s));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"int sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(i));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"long sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(l));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"float sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(f));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"double sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(d));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"long int sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(li));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"long long sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(ll));</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"long double sizeof %lu \n"</span>, <span class="keyword">sizeof</span>(ld));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c语言</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/17/c-space/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-c-scanf" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/15/c-scanf/">c 语言 (scanf)</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/15/c-scanf/" class="archive-article-date">
+  	<time datetime="2020-07-15T07:53:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="format"><a href="#format" class="headerlink" title="format"></a>format</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&#x3D;%[*][width][modifiers]type&#x3D;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="scanf"><a href="#scanf" class="headerlink" title="scanf"></a>scanf</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a,b,c;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"请输入三个数字："</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;a,&amp;b,&amp;c);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d,%d,%d \n"</span>,a,b,c);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="sscanf"><a href="#sscanf" class="headerlink" title="sscanf"></a>sscanf</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> a, b, c;</span><br><span class="line">   <span class="keyword">char</span> i[<span class="number">100</span>];</span><br><span class="line">   <span class="keyword">char</span> j[<span class="number">2</span>];</span><br><span class="line">   <span class="keyword">char</span> k[<span class="number">100</span>];</span><br><span class="line">   k[<span class="number">0</span>] = <span class="string">'\0'</span>;</span><br><span class="line"></span><br><span class="line">   <span class="built_in">sscanf</span>( <span class="string">"1 2 3 hello 12345678901234567890"</span>, <span class="string">"%d %d %d %s %s"</span>, &amp;a, &amp;b, &amp;c, i, j);</span><br><span class="line"></span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"%d %d %d '%s' '%s' '%s'\n"</span>, a, b, c, i, j, k);</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用时，需要注意 附加参数的类型！</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c语言</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/15/c-scanf/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-c-printf" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/13/c-printf/">c 语言 (print)</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/13/c-printf/" class="archive-article-date">
+  	<time datetime="2020-07-13T13:54:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s\n"</span>, <span class="string">"hello word"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="format"><a href="#format" class="headerlink" title="format"></a>format</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%[flags][width][.precision][length]specifier</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> i = <span class="number">123</span>;</span><br><span class="line">   <span class="keyword">long</span> <span class="keyword">long</span> ll = <span class="number">10000000000</span>;</span><br><span class="line"></span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"整数: %d %ld %lld \n"</span>, <span class="number">2020</span>, <span class="number">202002020000</span>, ll);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"10进制: %d 16进制: %x %#x 8进制: %o %#o \n"</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"浮点数: %f(前7位有效，小数6位) %lf(前16位有效，小数6位) %05.2f %+.0e %E \n"</span>, <span class="number">3.1415925563</span>, <span class="number">1234567890.141592653</span>, <span class="number">3.1415</span>, <span class="number">31.415</span>, <span class="number">31.415</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"字符: %c %c \n"</span>, <span class="string">'a'</span>, <span class="number">65</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"字符串: %s \n"</span>, <span class="string">"Hello World"</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"右对齐，用空格补齐: '%10d' \n"</span>, <span class="number">2020</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"右对齐，用0补齐: '%010d' \n"</span>, <span class="number">2020</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"左对齐，用空格补齐: '%-10d' \n"</span>, <span class="number">2020</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"左对齐，用0补齐: '%-8.10f' \n"</span>, <span class="number">2020.0202</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"百分之百: %d%% \n"</span>， <span class="number">100</span>);                                   </span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"自动选择%%f 或者 %%e %g %g %G %G \n"</span>, <span class="number">10.1</span>, <span class="number">0.00000000002</span>, <span class="number">10.3</span>, <span class="number">0.0000000004</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"有符号的整数: %i \n"</span>, <span class="number">100</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"无符号八进制整数: %o \n"</span>, <span class="number">100</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"指针: %p \n"</span>, &amp;i);</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="sprintf-amp-amp-snprintf"><a href="#sprintf-amp-amp-snprintf" class="headerlink" title="sprintf &amp;&amp; snprintf"></a>sprintf &amp;&amp; snprintf</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> str[<span class="number">80</span>];</span><br><span class="line">    <span class="keyword">char</span> str2[<span class="number">5</span>];</span><br><span class="line">    <span class="keyword">int</span> len;</span><br><span class="line"></span><br><span class="line">    len = <span class="built_in">sprintf</span>(str, <span class="string">"%f"</span>, M_PI);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"足够缓冲区 %d %s \n"</span>, len, str);</span><br><span class="line"></span><br><span class="line">    len = <span class="built_in">sprintf</span>(str2, <span class="string">"%.2f"</span>, M_PI);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"刚好缓冲区 %d %s \n"</span>, len, str2);</span><br><span class="line"></span><br><span class="line">    len = <span class="built_in">snprintf</span>(str2, <span class="number">5</span>, <span class="string">"%f"</span>, M_PI);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"限制长度 %d %s \n"</span>, len, str2);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 缓冲区溢出</span></span><br><span class="line">    len = <span class="built_in">sprintf</span>(str2, <span class="string">"%f"</span>, M_PI);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d %s \n"</span>, len, str2);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c语言</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/13/c-printf/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -298,6 +628,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">c语言</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
