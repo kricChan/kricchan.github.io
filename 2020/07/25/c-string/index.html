@@ -16,7 +16,7 @@
 <meta property="og:description" content="123int memcmp(const void *str1, const void *str2, size_t n);int strcmp(const char *str1, const char *str2);int strncmp(const char *str1, const char *str2, size_t n); 如果返回值 &lt; 0，则表示 str1 小于 str2。如果返回">
 <meta property="og:locale" content="cn">
 <meta property="article:published_time" content="2020-07-25T11:06:05.000Z">
-<meta property="article:modified_time" content="2020-07-25T16:27:57.139Z">
+<meta property="article:modified_time" content="2020-08-02T02:28:13.747Z">
 <meta property="article:author" content="KricChan">
 <meta property="article:tag" content="c语言">
 <meta name="twitter:card" content="summary">
@@ -219,6 +219,8 @@
 <hr>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">memcpy</span><span class="params">(<span class="keyword">void</span> *desc, <span class="keyword">const</span> <span class="keyword">void</span> *from, <span class="keyword">size_t</span> n)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">memmove</span><span class="params">(<span class="keyword">void</span> *desc, <span class="keyword">const</span> <span class="keyword">void</span> *from, <span class="keyword">size_t</span> n)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">strcpy</span><span class="params">(<span class="keyword">char</span> *dest, <span class="keyword">const</span> <span class="keyword">char</span> *src)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">strncpy</span><span class="params">(<span class="keyword">char</span> *dest, <span class="keyword">const</span> <span class="keyword">char</span> *src, <span class="keyword">size_t</span> n)</span></span>;</span><br></pre></td></tr></table></figure>
 <p>复制字符串内容，memmove 比 memcpy 安全。如果 desc 和 from 重叠的情况下，使用 memmove。</p>
+<a id="more"></a>
+
 <hr>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">memset</span><span class="params">(<span class="keyword">void</span> *str, <span class="keyword">int</span> c, <span class="keyword">size_t</span> n)</span></span></span><br></pre></td></tr></table></figure>
 <p>将 str 的前 n 个字符变为 c</p>
