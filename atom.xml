@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kricchan.github.io/"/>
-  <updated>2020-08-02T02:27:28.306Z</updated>
+  <updated>2020-08-09T13:36:41.155Z</updated>
   <id>https://kricchan.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>c-链接</title>
+    <link href="https://kricchan.github.io/2020/08/09/c-link/"/>
+    <id>https://kricchan.github.io/2020/08/09/c-link/</id>
+    <published>2020-08-09T13:11:11.000Z</published>
+    <updated>2020-08-09T13:36:41.155Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="编译流程"><a href="#编译流程" class="headerlink" title="编译流程"></a>编译流程</h2><p>c语言，从源代码编译成可执行文件，总共要经过4个阶段。</p><ol><li>预处理<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -E test.c -o test.i</span><br><span class="line">生成预处理后的文本文件</span><br></pre></td></tr></table></figure></li><li>编译<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -S test.i -o test.s</span><br><span class="line">编译为汇编文本文件</span><br></pre></td></tr></table></figure></li><li>汇编<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -c test.s -o test.o</span><br><span class="line">生成二进制文件</span><br></pre></td></tr></table></figure></li><li>链接<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc test.o -o main.out</span><br><span class="line">生成可执行文件</span><br></pre></td></tr></table></figure></li></ol><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="静态链接"><a href="#静态链接" class="headerlink" title="静态链接"></a>静态链接</h3><p>链接器在链接的过程中，将库的内容直接写入最终的可执行文件中。</p><h3 id="动态链接"><a href="#动态链接" class="headerlink" title="动态链接"></a>动态链接</h3><p>链接器在链接的过程中，将库的地址写入可执行文件中。程序装载或者运行时，才会加载库文件来运行。</p><h4 id="动态库代码"><a href="#动态库代码" class="headerlink" title="动态库代码"></a>动态库代码</h4><figure class="highlight c"><figcaption><span>hello.c</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">hello</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello world\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// gcc -fPIC -shared hello.c -o libhello.so</span></span><br></pre></td></tr></table></figure><h4 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h4><figure class="highlight c"><figcaption><span>hello.h</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">hello</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure><h4 id="主程序代码"><a href="#主程序代码" class="headerlink" title="主程序代码"></a>主程序代码</h4><figure class="highlight c"><figcaption><span>main.c</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"hello.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"call hello()\n"</span>);</span><br><span class="line">    hello();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//  gcc main.c -L . -lhello -o main</span></span><br></pre></td></tr></table></figure><h4 id="静态库编译"><a href="#静态库编译" class="headerlink" title="静态库编译"></a>静态库编译</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gcc -c hello.c -o hello.o</span></span><br><span class="line"><span class="comment">// ar -r libhello.a hello.o</span></span><br><span class="line"><span class="comment">// gcc main.c libhello.a -L. -o main</span></span><br></pre></td></tr></table></figure><h4 id="ldd命令"><a href="#ldd命令" class="headerlink" title="ldd命令"></a>ldd命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ldd .&#x2F;main</span><br><span class="line">可以查看是否有动态链接！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;编译流程&quot;&gt;&lt;a href=&quot;#编译流程&quot; class=&quot;headerlink&quot; title=&quot;编译流程&quot;&gt;&lt;/a&gt;编译流程&lt;/h2&gt;&lt;p&gt;c语言，从源代码编译成可执行文件，总共要经过4个阶段。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;预处理&lt;figure class=&quot;hig
+      
+    
+    </summary>
+    
+    
+    
+      <category term="C语言" scheme="https://kricchan.github.io/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>c-tcp</title>

@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://kricchan.github.io">
-  <title>c 语言 (print) | 一点点</title>
+  <title>c-链接 | 一点点</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1234567#include &lt;stdio.h&gt;int main()&amp;#123;    printf(&quot;%s\n&quot;, &quot;hello word&quot;);    return 0;&amp;#125;  format1%[flags][width][.precision][length]specifier 1234567891011121314151617181920212223#include &amp;">
+  <meta name="description" content="编译流程c语言，从源代码编译成可执行文件，总共要经过4个阶段。  预处理12gcc -E test.c -o test.i生成预处理后的文本文件 编译12gcc -S test.i -o test.s编译为汇编文本文件 汇编12gcc -c test.s -o test.o生成二进制文件 链接12gcc test.o -o main.out生成可执行文件    链接静态链接链接器在链接的过程中，将">
 <meta property="og:type" content="article">
-<meta property="og:title" content="c 语言 (print)">
-<meta property="og:url" content="https://kricchan.github.io/2020/07/13/c-printf/index.html">
+<meta property="og:title" content="c-链接">
+<meta property="og:url" content="https://kricchan.github.io/2020/08/09/c-link/index.html">
 <meta property="og:site_name" content="一点点">
-<meta property="og:description" content="1234567#include &lt;stdio.h&gt;int main()&amp;#123;    printf(&quot;%s\n&quot;, &quot;hello word&quot;);    return 0;&amp;#125;  format1%[flags][width][.precision][length]specifier 1234567891011121314151617181920212223#include &amp;">
+<meta property="og:description" content="编译流程c语言，从源代码编译成可执行文件，总共要经过4个阶段。  预处理12gcc -E test.c -o test.i生成预处理后的文本文件 编译12gcc -S test.i -o test.s编译为汇编文本文件 汇编12gcc -c test.s -o test.o生成二进制文件 链接12gcc test.o -o main.out生成可执行文件    链接静态链接链接器在链接的过程中，将">
 <meta property="og:locale" content="cn">
-<meta property="article:published_time" content="2020-07-13T13:54:09.000Z">
-<meta property="article:modified_time" content="2020-07-19T07:51:49.440Z">
+<meta property="article:published_time" content="2020-08-09T13:11:11.000Z">
+<meta property="article:modified_time" content="2020-08-09T13:36:41.155Z">
 <meta property="article:author" content="KricChan">
-<meta property="article:tag" content="c语言">
+<meta property="article:tag" content="C语言">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="一点点" type="application/atom+xml">
@@ -193,32 +193,48 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-c-printf" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-c-link" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      c 语言 (print)
+      c-链接
     </h1>
   
 
         
-        <a href="/2020/07/13/c-printf/" class="archive-article-date">
-  	<time datetime="2020-07-13T13:54:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
+        <a href="/2020/08/09/c-link/" class="archive-article-date">
+  	<time datetime="2020-08-09T13:11:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s\n"</span>, <span class="string">"hello word"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="编译流程"><a href="#编译流程" class="headerlink" title="编译流程"></a>编译流程</h2><p>c语言，从源代码编译成可执行文件，总共要经过4个阶段。</p>
+<ol>
+<li>预处理<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -E test.c -o test.i</span><br><span class="line">生成预处理后的文本文件</span><br></pre></td></tr></table></figure></li>
+<li>编译<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -S test.i -o test.s</span><br><span class="line">编译为汇编文本文件</span><br></pre></td></tr></table></figure></li>
+<li>汇编<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -c test.s -o test.o</span><br><span class="line">生成二进制文件</span><br></pre></td></tr></table></figure></li>
+<li>链接<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc test.o -o main.out</span><br><span class="line">生成可执行文件</span><br></pre></td></tr></table></figure>
 
-<h3 id="format"><a href="#format" class="headerlink" title="format"></a>format</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%[flags][width][.precision][length]specifier</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> i = <span class="number">123</span>;</span><br><span class="line">   <span class="keyword">long</span> <span class="keyword">long</span> ll = <span class="number">10000000000</span>;</span><br><span class="line"></span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"整数: %d %ld %lld \n"</span>, <span class="number">2020</span>, <span class="number">202002020000</span>, ll);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"10进制: %d 16进制: %x %#x 8进制: %o %#o \n"</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"浮点数: %f(前7位有效，小数6位) %lf(前16位有效，小数6位) %05.2f %+.0e %E \n"</span>, <span class="number">3.1415925563</span>, <span class="number">1234567890.141592653</span>, <span class="number">3.1415</span>, <span class="number">31.415</span>, <span class="number">31.415</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"字符: %c %c \n"</span>, <span class="string">'a'</span>, <span class="number">65</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"字符串: %s \n"</span>, <span class="string">"Hello World"</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"右对齐，用空格补齐: '%10d' \n"</span>, <span class="number">2020</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"右对齐，用0补齐: '%010d' \n"</span>, <span class="number">2020</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"左对齐，用空格补齐: '%-10d' \n"</span>, <span class="number">2020</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"左对齐，用0补齐: '%-8.10f' \n"</span>, <span class="number">2020.0202</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"百分之百: %d%% \n"</span>， <span class="number">100</span>);                                   </span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"自动选择%%f 或者 %%e %g %g %G %G \n"</span>, <span class="number">10.1</span>, <span class="number">0.00000000002</span>, <span class="number">10.3</span>, <span class="number">0.0000000004</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"有符号的整数: %i \n"</span>, <span class="number">100</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"无符号八进制整数: %o \n"</span>, <span class="number">100</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"指针: %p \n"</span>, &amp;i);</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="静态链接"><a href="#静态链接" class="headerlink" title="静态链接"></a>静态链接</h3><p>链接器在链接的过程中，将库的内容直接写入最终的可执行文件中。</p>
+<h3 id="动态链接"><a href="#动态链接" class="headerlink" title="动态链接"></a>动态链接</h3><p>链接器在链接的过程中，将库的地址写入可执行文件中。程序装载或者运行时，才会加载库文件来运行。</p>
+<h4 id="动态库代码"><a href="#动态库代码" class="headerlink" title="动态库代码"></a>动态库代码</h4><figure class="highlight c"><figcaption><span>hello.c</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">hello</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello world\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// gcc -fPIC -shared hello.c -o libhello.so</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="sprintf-amp-amp-snprintf"><a href="#sprintf-amp-amp-snprintf" class="headerlink" title="sprintf &amp;&amp; snprintf"></a>sprintf &amp;&amp; snprintf</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> str[<span class="number">80</span>];</span><br><span class="line">    <span class="keyword">char</span> str2[<span class="number">5</span>];</span><br><span class="line">    <span class="keyword">int</span> len;</span><br><span class="line"></span><br><span class="line">    len = <span class="built_in">sprintf</span>(str, <span class="string">"%f"</span>, M_PI);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"足够缓冲区 %d %s \n"</span>, len, str);</span><br><span class="line"></span><br><span class="line">    len = <span class="built_in">sprintf</span>(str2, <span class="string">"%.2f"</span>, M_PI);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"刚好缓冲区 %d %s \n"</span>, len, str2);</span><br><span class="line"></span><br><span class="line">    len = <span class="built_in">snprintf</span>(str2, <span class="number">5</span>, <span class="string">"%f"</span>, M_PI);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"限制长度 %d %s \n"</span>, len, str2);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 缓冲区溢出</span></span><br><span class="line">    len = <span class="built_in">sprintf</span>(str2, <span class="string">"%f"</span>, M_PI);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d %s \n"</span>, len, str2);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h4><figure class="highlight c"><figcaption><span>hello.h</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">hello</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="主程序代码"><a href="#主程序代码" class="headerlink" title="主程序代码"></a>主程序代码</h4><figure class="highlight c"><figcaption><span>main.c</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"hello.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"call hello()\n"</span>);</span><br><span class="line">    hello();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//  gcc main.c -L . -lhello -o main</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="静态库编译"><a href="#静态库编译" class="headerlink" title="静态库编译"></a>静态库编译</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gcc -c hello.c -o hello.o</span></span><br><span class="line"><span class="comment">// ar -r libhello.a hello.o</span></span><br><span class="line"><span class="comment">// gcc main.c libhello.a -L. -o main</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="ldd命令"><a href="#ldd命令" class="headerlink" title="ldd命令"></a>ldd命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ldd .&#x2F;main</span><br><span class="line">可以查看是否有动态链接！</span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -262,7 +278,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c语言</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
         		</li>
       		
 		</ul>
@@ -318,7 +334,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://kricchan.github.io/2020/07/13/c-printf/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://kricchan.github.io/2020/08/09/c-link/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -332,18 +348,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/15/c-scanf/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          c 语言 (scanf)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/07/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2020/08/01/c-tcp/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">c-tcp</div>
       <i class="icon-circle-right"></i>
     </a>
   
